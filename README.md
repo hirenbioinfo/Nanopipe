@@ -1,4 +1,4 @@
-# Nanoflow 
+# Nanopipe 
 ##  Pipeline Summary
 
 ## Steps
