@@ -111,19 +111,15 @@ script:
         """
 }
 
-
-/*
-process filter_long {
+process assembly {
     input:
   file(filtread) from file(trimmed_reads)
 
     output:
-  file('trimmed.fastq.gz') into filtlong_reads
+  file('assembly.fasta') into filtlong_reads
 
 script:
         """
     flye --nano-raw ${filtread}--genome-size 1m --out-dir ./flye_output
         """
-
 }
-*/
