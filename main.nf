@@ -120,6 +120,6 @@ process assembly {
 
 script:
         """
-    flye --nano-raw ${filtread}--genome-size 1m --out-dir ./flye_output
+    flye --nano-raw ${filtread} --genome-size 1m --out-dir ./flye_output
         """
 }
