@@ -161,7 +161,25 @@ script:
     flye --nano-raw ${filtread} --genome-size 1m --out-dir ./flye_output
         """
 }
+process PROKKA {
+    tag { sample_id }
+    
+    publishDir "$params.outdir/annotation/", 
+        mode: 'copy'
+    
+    input:
+    tuple val(sample_id), path(assembly)  
+    
+    
+    output:
+    //tuple val(sample_id), path("${sample_id}/report.{pdf,html}")
+    path("${sample_id}")
 
+    script:
+    """
+    prokka --cpus ${task.cpus} --fast --outdir ${sample_id} --prefix ${sample_id} ${assembly} --
+    """
+}
 workflow.onComplete {
 
     println ( workflow.success ? """
