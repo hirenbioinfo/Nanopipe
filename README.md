@@ -5,8 +5,8 @@
 ### 1. Basecalling and demiltiplexing
 ### 2. Sequencing QC
 ### 3. Assembly
-### 4. Assembly Polishing
-### 5. Circularization
+### 4. Annotation
+
 Nextflow pipeline for Oxford Nanopore data analysis 
 
 
